@@ -16,10 +16,11 @@ public class Main extends JavaPlugin{
     @Override
     public void onEnable() {
         try {
+            this.getLogger().info("Initializing...");
             init();
-            this.getLogger().info("BasicImprovements successfully loaded");
+            this.getLogger().info("Successfully initialized!");
         } catch(Exception e) {
-            this.getLogger().warning("Error loading BasicImprovements:");
+            this.getLogger().warning("Error while initializing");
             e.printStackTrace();
         }
     }
@@ -27,7 +28,7 @@ public class Main extends JavaPlugin{
     //When the plugin exits
     @Override
     public void onDisable() {
-        this.getLogger().info("BasicImprovements shut down successfully");
+        this.getLogger().info("Disabled!");
     }
     
     //Initialize the plugin
@@ -49,6 +50,7 @@ public class Main extends JavaPlugin{
         new Feed(this);
         new Gamemode(this);
         new Backup(this);
+        this.getLogger().info("Commands initialized!");
     }
     
     //Initialize the plugin listeners
@@ -61,5 +63,6 @@ public class Main extends JavaPlugin{
     //Initialize the backup handler
     private void initBackup() {
         new BackupHandler(this);
+        this.getLogger().info("Backup handler initialized!");
     }
 }

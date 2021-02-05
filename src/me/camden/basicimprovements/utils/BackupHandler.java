@@ -72,6 +72,8 @@ public class BackupHandler {
         //Creates the task timer for saving that runs asynchronously
         plugin.getServer().getScheduler().runTaskTimerAsynchronously(plugin, () -> {
             runBackup();
+            String next = "Next automatic backup in approx: " + df.format(getRemaining() / 72000.) + "hr";
+            plugin.getLogger().info(next); 
         }, delay, interval);
     }
 
