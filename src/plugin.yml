@@ -1,0 +1,47 @@
+name: BasicImprovements
+version: 1.0.0
+api-version: 1.16
+author: abacuscl
+
+main: me.camden.basicimprovements.Main
+description: A plugin that provides some basic, quality of life, server improvements.
+
+commands:
+    heal:
+        description: Fully heal yourself or a target player
+        aliases: h
+        usage: "§cUsage: /<command> [target]"
+    feed:
+        description: Fully feed yourself or a target player
+        aliases: f
+        usage: "§cUsage: /<command> [target]"
+    gms:
+        description: Set gamemode to survival
+        usage: "§cUsage: /<command> [target]"
+    gmc:
+        description: Set gamemode to creative
+        usage: "§cUsage: /<command> [target]"
+    gma:
+        description: Set gamemode to adventure
+        usage: "§cUsage: /<command> [target]"
+    gmsp:
+        description: Set gamemode to spectator
+        usage: "§cUsage: /<command> [target]"
+    backup:
+        description: Create a backup of the server
+        usage: "§cUsage: /<command>"
+        
+
+permissions:
+    basicimprovements.heal:
+        description: Allows the heal command
+        default: op
+    basicimprovements.feed:
+        description: Allows the feed command
+        default: op
+    basicimprovements.gamemode:
+        description: Allows the shortened gamemode command
+        default: op
+    basicimprovements.backup:
+        description: Allows the backup command
+        default: op
