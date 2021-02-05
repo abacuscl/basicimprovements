@@ -46,7 +46,7 @@ backup_finished: "&fBackup completed successfully"
 #The path that the backups are created in.
 backup_path: plugins/BasicImprovements/backups
 
-#The total number of backups to keep (Total worlds, not world specific).
+#The total number of backups to keep.
 kept_versions: 10
 
 #The time to make the backups at, as of now the interval is once per day.
