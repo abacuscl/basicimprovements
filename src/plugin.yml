@@ -1,10 +1,11 @@
 name: BasicImprovements
 version: 1.0.0
-api-version: 1.16
 author: abacuscl
+website: https://github.com/abacuscl/BasicImprovements
+description: A plugin that provides some basic, quality of life, server improvements.
 
 main: me.camden.basicimprovements.Main
-description: A plugin that provides some basic, quality of life, server improvements.
+api-version: 1.16
 
 commands:
     heal:
