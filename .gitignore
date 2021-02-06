@@ -28,3 +28,16 @@ dist/BasicImprovements.jar
 nbproject/private/config.properties
 spigot-1.16.5.jar
 build/classes/me/camden/basicimprovements/commands/utilities/Time.class
+build/classes/me/abacuscl/basicimprovements/commands/backups/Backup.class
+build/classes/me/abacuscl/basicimprovements/commands/utilities/Feed.class
+build/classes/me/abacuscl/basicimprovements/commands/utilities/Gamemode.class
+build/classes/me/abacuscl/basicimprovements/commands/utilities/Heal.class
+build/classes/me/abacuscl/basicimprovements/commands/utilities/Time.class
+build/classes/me/abacuscl/basicimprovements/listeners/BedListener.class
+build/classes/me/abacuscl/basicimprovements/listeners/JoinListener.class
+build/classes/me/abacuscl/basicimprovements/listeners/KickListener.class
+build/classes/me/abacuscl/basicimprovements/listeners/LeaveListener.class
+build/classes/me/abacuscl/basicimprovements/Main.class
+build/classes/me/abacuscl/basicimprovements/utils/BackupHandler$1.class
+build/classes/me/abacuscl/basicimprovements/utils/BackupHandler.class
+build/classes/me/abacuscl/basicimprovements/utils/Chat.class
