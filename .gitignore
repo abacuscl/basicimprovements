@@ -27,3 +27,4 @@ nbproject/project.xml
 dist/BasicImprovements.jar
 nbproject/private/config.properties
 spigot-1.16.5.jar
+build/classes/me/camden/basicimprovements/commands/utilities/Time.class
