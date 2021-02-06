@@ -37,7 +37,8 @@ public class BackupHandler {
     private static String backupPath = "plugins/BasicImprovements/backups";
     private static int keptVersions = 10;
     private static final double INTERVAL = 24;
-    private static double startTime = 23;
+    private static double startTime = 24;
+    private static boolean shutdown = false;
 
     public BackupHandler(Main plugin) {
         BackupHandler.plugin = plugin;
@@ -82,16 +83,20 @@ public class BackupHandler {
         Bukkit.broadcastMessage(Chat.sendMessage("backup_started", "", plugin));
         
         //Needed to set world autosave synchronously
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            try {
-                for (World w : Bukkit.getWorlds()) {
-                    w.setAutoSave(false);
-                    w.save();
+        //Also needed to disable the task running in the event of a server shutdown
+        //Throws an exception if not disabled
+        if (!shutdown == true) {
+            plugin.getServer().getScheduler().runTask(plugin, () -> {
+                try {
+                    for (World w : Bukkit.getWorlds()) {
+                        w.setAutoSave(false);
+                        w.save();
+                    }
+                } catch (Exception e) {
+                    Chat.debugToConsole(e);
                 }
-            } catch (Exception e) {
-                Chat.debugToConsole(e);
-            }
-        });
+            });
+        }
 
         Path sourceFolderPath = Paths.get(WORKING_DIR);
         
@@ -125,22 +130,28 @@ public class BackupHandler {
                     zos.closeEntry();
                     return FileVisitResult.CONTINUE;
                 }
-            });
+            });  
+    
             deleteOld();
+            
         } catch (Exception e) {
             Chat.debugToConsole(e);
         }
         
         //Needed to set world autosave synchronously
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            try {
-                for (World w : Bukkit.getWorlds()) {
-                    w.setAutoSave(true);
+        //Also needed to disable the task running in the event of a server shutdown
+        //Throws an exception if not disabled
+        if (!shutdown == true) {
+            plugin.getServer().getScheduler().runTask(plugin, () -> {
+                try {
+                    for (World w : Bukkit.getWorlds()) {
+                        w.setAutoSave(true);
+                    }
+                } catch (Exception e) {
+                    Chat.debugToConsole(e);
                 }
-            } catch (Exception e) {
-                Chat.debugToConsole(e);
-            }
-        });
+            });
+        }
 
         Bukkit.broadcastMessage(Chat.sendMessage("backup_finished", "", plugin));
     }
@@ -183,5 +194,24 @@ public class BackupHandler {
                 Chat.debugToConsole(e);
             }
         }
+    }
+    
+    //Begins the shutdown process in the event of a server shutdown
+    public static boolean shutdown() {
+        
+        //Stops the creation of new Bukkit tasks
+        shutdown = true;
+        
+        //Re-saves the worlds and re-enables autosaves in case they were disabled
+        //This comes before the backups are made and the server closes
+        try {
+            for (World w : Bukkit.getWorlds()) {
+                w.save();
+                w.setAutoSave(true);
+            }
+        } catch (Exception e) {
+            Chat.debugToConsole(e);
+        }
+        return true;
     }
 }
