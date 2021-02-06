@@ -4,7 +4,7 @@ author: abacuscl
 website: https://github.com/abacuscl/BasicImprovements
 description: A plugin that provides some basic, quality of life, server improvements.
 
-main: me.camden.basicimprovements.Main
+main: me.abacuscl.basicimprovements.Main
 api-version: 1.16
 
 commands:
