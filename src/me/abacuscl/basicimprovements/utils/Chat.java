@@ -1,6 +1,6 @@
-package me.camden.basicimprovements.utils;
+package me.abacuscl.basicimprovements.utils;
 
-import me.camden.basicimprovements.Main;
+import me.abacuscl.basicimprovements.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 

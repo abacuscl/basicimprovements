@@ -1,14 +1,14 @@
-package me.camden.basicimprovements;
+package me.abacuscl.basicimprovements;
 
-import me.camden.basicimprovements.commands.backups.Backup;
-import me.camden.basicimprovements.utils.BackupHandler;
-import me.camden.basicimprovements.commands.utilities.Feed;
-import me.camden.basicimprovements.commands.utilities.Gamemode;
-import me.camden.basicimprovements.commands.utilities.Heal;
-import me.camden.basicimprovements.commands.utilities.Time;
-import me.camden.basicimprovements.listeners.BedListener;
-import me.camden.basicimprovements.listeners.JoinListener;
-import me.camden.basicimprovements.listeners.LeaveListener;
+import me.abacuscl.basicimprovements.commands.backups.Backup;
+import me.abacuscl.basicimprovements.utils.BackupHandler;
+import me.abacuscl.basicimprovements.commands.utilities.Feed;
+import me.abacuscl.basicimprovements.commands.utilities.Gamemode;
+import me.abacuscl.basicimprovements.commands.utilities.Heal;
+import me.abacuscl.basicimprovements.commands.utilities.Time;
+import me.abacuscl.basicimprovements.listeners.BedListener;
+import me.abacuscl.basicimprovements.listeners.JoinListener;
+import me.abacuscl.basicimprovements.listeners.LeaveListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitWorker;

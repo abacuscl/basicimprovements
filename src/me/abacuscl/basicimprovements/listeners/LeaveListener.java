@@ -1,7 +1,7 @@
-package me.camden.basicimprovements.listeners;
+package me.abacuscl.basicimprovements.listeners;
 
-import me.camden.basicimprovements.Main;
-import me.camden.basicimprovements.utils.Chat;
+import me.abacuscl.basicimprovements.Main;
+import me.abacuscl.basicimprovements.utils.Chat;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

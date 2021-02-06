@@ -1,7 +1,7 @@
-package me.camden.basicimprovements.commands.utilities;
+package me.abacuscl.basicimprovements.commands.utilities;
 
-import me.camden.basicimprovements.Main;
-import me.camden.basicimprovements.utils.Chat;
+import me.abacuscl.basicimprovements.Main;
+import me.abacuscl.basicimprovements.utils.Chat;
 import org.bukkit.Bukkit;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;

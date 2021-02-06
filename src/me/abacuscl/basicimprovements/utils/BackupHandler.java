@@ -1,4 +1,4 @@
-package me.camden.basicimprovements.utils;
+package me.abacuscl.basicimprovements.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-import me.camden.basicimprovements.Main;
+import me.abacuscl.basicimprovements.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 
