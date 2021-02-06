@@ -63,9 +63,9 @@ public class Heal implements CommandExecutor {
         //PLAYER
         Player p = (Player) sender;
         
-        //If the player is not an op, then they cannot use /heal
-        if (!p.isOp()) {
-            p.sendMessage(Chat.sendErrorMessage("op"));
+        //If the player does not have the permissions, then they cannot use /heal
+        if (!p.hasPermission("basicimprovements.heal")) {
+            p.sendMessage(Chat.sendErrorMessage("permission"));
             return true;
         }
         

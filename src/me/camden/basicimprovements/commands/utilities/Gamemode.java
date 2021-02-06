@@ -68,9 +68,9 @@ public class Gamemode implements CommandExecutor {
         //PLAYER
         Player p = (Player) sender;        
         
-        //If the player is not an op, then they cannot use the gamemode commands
-        if (!p.isOp()) {
-            p.sendMessage(Chat.sendErrorMessage("op"));
+        //If the player does not have the permissions, then they cannot use the gamemode commands
+        if (!p.hasPermission("basicimprovements.gamemode")) {
+            p.sendMessage(Chat.sendErrorMessage("permission"));
             return true;
         }
         
