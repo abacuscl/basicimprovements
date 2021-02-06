@@ -39,7 +39,7 @@ public class Chat {
                 formattedName = chat("&e&l" + name);
             }
             String formattedText = chat(plugin.getConfig().getString(typ));
-       
+            
             return chat(PLUGIN_NAME + formattedText.replace("<player>", formattedName));
         } catch (Exception e) {
             debugToConsole(e);
@@ -65,6 +65,12 @@ public class Chat {
                 str = PLUGIN_NAME + MISSING_CONF;
                 return chat(str);
         }
+    }
+    
+    public static String kickMessage(String name, String reason, Main plugin) {
+        String message = sendMessage("kick_message", name, plugin);
+        message = message.replace("<reason>", reason);
+        return chat(message);
     }
     
     //Outputs the debug information of an exception to the server console

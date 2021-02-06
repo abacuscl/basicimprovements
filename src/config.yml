@@ -13,6 +13,9 @@ join_message: "<player> &fhas joined the server"
 #The message displayed when a player leaves the server.
 leave_message: "<player> &fhas left the server"
 
+#The message displayed when a player is kicked.
+kick_message: "<player> &fhas been kicked (<reason>)"
+
 #The message displayed when a player sleeps.
 sleep_message: "<player> &aslept in a bed"
 

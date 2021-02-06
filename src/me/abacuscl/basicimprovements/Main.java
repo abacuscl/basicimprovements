@@ -8,6 +8,7 @@ import me.abacuscl.basicimprovements.commands.utilities.Heal;
 import me.abacuscl.basicimprovements.commands.utilities.Time;
 import me.abacuscl.basicimprovements.listeners.BedListener;
 import me.abacuscl.basicimprovements.listeners.JoinListener;
+import me.abacuscl.basicimprovements.listeners.KickListener;
 import me.abacuscl.basicimprovements.listeners.LeaveListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -68,6 +69,7 @@ public class Main extends JavaPlugin{
         new JoinListener(this);
         new LeaveListener(this);
         new BedListener(this);
+        new KickListener(this);
     }
     
     //Initialize the backup handler
