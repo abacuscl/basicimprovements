@@ -14,43 +14,61 @@
  ## Features
  
  ### Commands
- **All commands in this plugin require the player executing the command to be a  server
- operator.**
+ **All commands in this plugin require the player executing the command to have the proper
+ permissions which are, by default, a server operator. All permissions are detailed in their
+ specific commands.**
  
  #### General Commands
  - `/backup`  
+   - Permission: `basicimprovements.backup`  
  
  Starts a backup of the server.
  
  - `/feed [target]`
    - Short version: `/f [target]`  
+   - Permission: `basicimprovements.feed`  
  
  Fills the target player's hunger and saturation.
  If there is no target player, it defaults to yourself.
  
  - `/heal [target]`
    - Short version: `/h [target]`  
+   - Permission: `basicimprovements.heal`  
  
  Fills the target player's health to maximum.
  If there is no target player, it defaults to yourself.
  
+ - `/tsd`  
+   - Permission: `basicimprovements.time`  
+ 
+ Sets the time to day.
+ 
+ - `/tsn`  
+   - Permission: `basicimprovements.time`  
+ 
+ Sets the time to night.
+ 
  #### Gamemode Commands
  - `/gma [target]`  
+   - Permission: `basicimprovements.gamemode`  
  
  Sets the target player's gamemode to adventure.
  If there is no target player, it defaults to yourself.
  
  - `/gms [target]`  
+   - Permission: `basicimprovements.gamemode`  
  
  Sets the target player's gamemode to survival.
  If there is no target player, it defaults to yourself.
  
  - `/gmc [target]`  
+   - Permission: `basicimprovements.gamemode`  
  
  Sets the target player's gamemode to creative.
  If there is no target player, it defaults to yourself.
  
  - `/gmsp [target]`  
+   - Permission: `basicimprovements.gamemode`  
  
  Sets the target player's gamemode to spectator.
  If there is no target player, it defaults to yourself.
@@ -64,11 +82,13 @@
  - New chat messages for the new commands.
  
  ### Backups
- The backups run every 24 hours and the default backup folder is: `/plugins/BasicImprovements/backups`. By default the start time is 23:00 (11:00pm), but you can configure
+ The backups run every 24 hours and the default backup folder is: `/plugins/BasicImprovements/backups`. By default the start time is 24:00 (12:00am), but you can configure
  this time as well. Use the `/backup` command to run a manual backup before the automatic backup time.
  
  A backup consists of the entire server folder but not previous backups to save storage space. You can configure the number of
  kept server backups as well.
+ 
+ If you stop the server while a backup is in progress, the server will wait until the backup is finished before shutting down completely.
  
  ### Single Player Sleep
  When one player sleeps, it sets the whole server's time to day and clears all weather. Now you no longer require all players
@@ -98,8 +118,8 @@
  
  ----
  ## Ideas to Implement
- - [ ] Time that the player joins the server
- - [ ] Time that the player leaves the server
- - [ ] Total time that the player was online for that session
- - [ ] Time set shorthand commands
+ - [ ] Time that the player joins the server (Planned Release 2.0.0)
+ - [ ] Time that the player leaves the server (Planned Release 2.0.0)
+ - [ ] Total time that the player was online for that session (Planned Release 2.0.0)
+ - [x] Time set shorthand commands (Planned Release 2.0.0)
  
