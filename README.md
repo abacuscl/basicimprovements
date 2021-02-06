@@ -102,4 +102,5 @@
  - [ ] Time that the player leaves the server
  - [ ] Total time that the player was online for that session
  - [ ] Time set shorthand commands
+ - [ ] Weather set shorthand commands
  
