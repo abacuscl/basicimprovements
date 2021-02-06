@@ -39,6 +39,12 @@ backup_started: "&fBackup started..."
 
 #The message displayed when a backup finishes.
 backup_finished: "&fBackup completed successfully"
+
+#The message displayed when a player changes the time to day.
+time_set_day: "<player> &fSet the time to &eday"
+
+#The message displayed when a player changes the time to night.
+time_set_night: "<player> &fSet the time to &enight"
     
 #~----------------
 #Backup Settings

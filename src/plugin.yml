@@ -1,5 +1,5 @@
 name: BasicImprovements
-version: 1.0.0
+version: 2.0.0
 author: abacuscl
 website: https://github.com/abacuscl/BasicImprovements
 description: A plugin that provides some basic, quality of life, server improvements.
@@ -31,6 +31,12 @@ commands:
     backup:
         description: Create a backup of the server
         usage: "§cUsage: /<command>"
+    tsd:
+        description: Set the time to day
+        usage: "§cUsage: /<command>"
+    tsn:
+        description: Set the time to night
+        usage: "§cUsage: /<command>"
         
 
 permissions:
@@ -45,4 +51,7 @@ permissions:
         default: op
     basicimprovements.backup:
         description: Allows the backup command
+        default: op
+    basicimprovements.time:
+        description: Allows the shortened time command
         default: op
