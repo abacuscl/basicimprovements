@@ -15,8 +15,8 @@
  
  ### Commands
  **All commands in this plugin require the player executing the command to have the proper
- permissions which are, by default, a server operator. All permissions are detailed in their
- specific commands.**
+ permissions which are, by default, a server operator with at least permission level 2. 
+ All permissions are detailed in their specific commands.**
  
  #### General Commands
  - `/backup`  
