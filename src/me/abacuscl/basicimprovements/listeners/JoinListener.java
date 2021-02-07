@@ -1,7 +1,8 @@
-package me.camden.basicimprovements.listeners;
+package me.abacuscl.basicimprovements.listeners;
 
-import me.camden.basicimprovements.Main;
-import me.camden.basicimprovements.utils.Chat;
+import me.abacuscl.basicimprovements.Main;
+import me.abacuscl.basicimprovements.timelogger.LoggingHandler;
+import me.abacuscl.basicimprovements.utils.Chat;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,6 +12,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class JoinListener implements Listener {
     
     private final Main PLUGIN;
+    private final String JOIN_MESSAGE = "<player> &fjoined the server at <time>";
     
     public JoinListener(Main plugin){
         this.PLUGIN = plugin;
@@ -22,12 +24,16 @@ public class JoinListener implements Listener {
     public void onJoin(PlayerJoinEvent pje) {
         Player p = pje.getPlayer();
         pje.setJoinMessage("");
+        LoggingHandler.logJoin(p);
         
         //If the player has not played before then show a special message
         if (!p.hasPlayedBefore()) {
             Bukkit.broadcastMessage(Chat.sendMessage("firstjoin_message", p.getDisplayName(), PLUGIN));
         } else {
-            Bukkit.broadcastMessage(Chat.sendMessage("join_message", p.getDisplayName(), PLUGIN));
+            String join = JOIN_MESSAGE.replace("<player>", "&e&l" + p.getDisplayName());
+            join = join.replace("<time>", LoggingHandler.getJoinTime(p));
+            
+            Bukkit.broadcastMessage(Chat.chat(join));
         }
     }
 }

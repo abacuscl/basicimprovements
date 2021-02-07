@@ -1,8 +1,8 @@
-package me.camden.basicimprovements.commands.backups;
+package me.abacuscl.basicimprovements.commands.backups;
 
-import me.camden.basicimprovements.Main;
-import me.camden.basicimprovements.utils.BackupHandler;
-import me.camden.basicimprovements.utils.Chat;
+import me.abacuscl.basicimprovements.Main;
+import me.abacuscl.basicimprovements.utils.BackupHandler;
+import me.abacuscl.basicimprovements.utils.Chat;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,11 +21,11 @@ public class Backup implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         
-        //If the player is not an op, they cannot use /backup
+        //If the player does not have the permissions, they cannot use /backup
         if(sender instanceof Player) {
             Player p = (Player) sender;
-            if(!p.isOp()) {
-                p.sendMessage(Chat.sendErrorMessage("op"));
+            if(!p.hasPermission("basicimprovements.backup")) {
+                p.sendMessage(Chat.sendErrorMessage("permission"));
                 return true;
             }
         }
