@@ -46,12 +46,12 @@ permissions:
     basicimprovements.feed:
         description: Allows the feed command
         default: op
-    basicimprovements.gamemode:
+    basicimprovements.shortgamemode:
         description: Allows the shortened gamemode command
         default: op
     basicimprovements.backup:
         description: Allows the backup command
         default: op
-    basicimprovements.time:
+    basicimprovements.shorttime:
         description: Allows the shortened time command
         default: op

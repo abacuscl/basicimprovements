@@ -9,11 +9,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Gamemode implements CommandExecutor {
+public class ShortGamemode implements CommandExecutor {
 
     private final Main PLUGIN;
 
-    public Gamemode(Main plugin) {
+    public ShortGamemode(Main plugin) {
         this.PLUGIN = plugin;
         plugin.getCommand("gms").setExecutor(this);
         plugin.getCommand("gmc").setExecutor(this);
@@ -69,7 +69,7 @@ public class Gamemode implements CommandExecutor {
         Player p = (Player) sender;        
         
         //If the player does not have the permissions, then they cannot use the gamemode commands
-        if (!p.hasPermission("basicimprovements.gamemode")) {
+        if (!p.hasPermission("basicimprovements.shortgamemode")) {
             p.sendMessage(Chat.sendErrorMessage("permission"));
             return true;
         }
