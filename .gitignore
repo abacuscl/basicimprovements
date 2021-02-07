@@ -41,3 +41,5 @@ build/classes/me/abacuscl/basicimprovements/Main.class
 build/classes/me/abacuscl/basicimprovements/utils/BackupHandler$1.class
 build/classes/me/abacuscl/basicimprovements/utils/BackupHandler.class
 build/classes/me/abacuscl/basicimprovements/utils/Chat.class
+build/classes/me/abacuscl/basicimprovements/timelogger/LoggingHandler.class
+build/classes/me/abacuscl/basicimprovements/timelogger/TimeLogger.class
