@@ -74,7 +74,7 @@
  If there is no target player, it defaults to yourself.
  
  ### Chat Messages
- All chat messages are configurable in the `config.yml` file.
+ All configurable chat messages are configurable in the `config.yml` file.
  
  - New chat messages for players joining and leaving including time played and join/leave time.
  - New chat message for a player joining for the first time.
