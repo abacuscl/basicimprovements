@@ -106,6 +106,7 @@
  In order to set up the plugin:
  1. Click on "Releases" on the right side just below "About".
  2. From the latest release, download the .jar file.
+    - Alternatively, go to the `releases` branch and clone the latest release.
  3. Place the BasicImprovements.jar inside your server plugins folder.
  4. Start the server and the plugin will load.
  
