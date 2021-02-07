@@ -7,12 +7,6 @@
 #The message displayed when a player first joins the server.
 firstjoin_message: "<player> &dhas joined the server for the first time!"
 
-#The message displayed when a player rejoins the server.
-join_message: "<player> &fhas joined the server"
-
-#The message displayed when a player leaves the server.
-leave_message: "<player> &fhas left the server"
-
 #The message displayed when a player is kicked.
 kick_message: "<player> &fhas been kicked (<reason>)"
 
