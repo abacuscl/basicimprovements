@@ -3,9 +3,9 @@ package me.abacuscl.basicimprovements;
 import me.abacuscl.basicimprovements.commands.backups.Backup;
 import me.abacuscl.basicimprovements.utils.BackupHandler;
 import me.abacuscl.basicimprovements.commands.utilities.Feed;
-import me.abacuscl.basicimprovements.commands.utilities.Gamemode;
+import me.abacuscl.basicimprovements.commands.utilities.ShortGamemode;
 import me.abacuscl.basicimprovements.commands.utilities.Heal;
-import me.abacuscl.basicimprovements.commands.utilities.Time;
+import me.abacuscl.basicimprovements.commands.utilities.ShortTime;
 import me.abacuscl.basicimprovements.listeners.BedListener;
 import me.abacuscl.basicimprovements.listeners.JoinListener;
 import me.abacuscl.basicimprovements.listeners.KickListener;
@@ -58,9 +58,9 @@ public class Main extends JavaPlugin{
     private void initCommands() {
         new Heal(this);
         new Feed(this);
-        new Gamemode(this);
+        new ShortGamemode(this);
         new Backup(this);
-        new Time(this);
+        new ShortTime(this);
         this.getLogger().info("Commands initialized!");
     }
     

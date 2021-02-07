@@ -8,11 +8,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Time implements CommandExecutor {
+public class ShortTime implements CommandExecutor {
     
     private final Main PLUGIN;
     
-    public Time (Main plugin) {
+    public ShortTime (Main plugin) {
         this.PLUGIN = plugin;
         plugin.getCommand("tsd").setExecutor(this);
         plugin.getCommand("tsn").setExecutor(this);
@@ -32,7 +32,7 @@ public class Time implements CommandExecutor {
         Player p = (Player) sender;
         
         //If the player does not have the permissions, they cannot execute the commands
-        if(!p.hasPermission("basicimprovements.time")) {
+        if(!p.hasPermission("basicimprovements.shorttime")) {
             p.sendMessage(Chat.sendErrorMessage("permission"));
             return true;
         }
