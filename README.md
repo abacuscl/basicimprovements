@@ -118,8 +118,7 @@
  
  ----
  ## Ideas to Implement
- - [ ] Time that the player joins the server (Planned Release 2.0.0)
- - [ ] Time that the player leaves the server (Planned Release 2.0.0)
- - [ ] Total time that the player was online for that session (Planned Release 2.0.0)
+ - [x] Time that the player joins the server (Planned Release 2.0.0)
+ - [x] Time that the player leaves the server (Planned Release 2.0.0)
+ - [x] Total time that the player was online for that session (Planned Release 2.0.0)
  - [x] Time set shorthand commands (Planned Release 2.0.0)
- - [ ] Weather set shorthand commands
