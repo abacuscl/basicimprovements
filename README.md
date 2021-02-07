@@ -74,7 +74,7 @@
  If there is no target player, it defaults to yourself.
  
  ### Chat Messages
- All configurable chat messages are configurable in the `config.yml` file.
+ All configurable chat messages can be configured in the `config.yml` file.
  
  - New chat messages for players joining and leaving including time played and join/leave time.
  - New chat message for a player joining for the first time.
@@ -119,7 +119,7 @@
  
  ----
  ## Ideas to Implement
- - [x] Time that the player joins the server (Planned Release 2.0.0)
- - [x] Time that the player leaves the server (Planned Release 2.0.0)
- - [x] Total time that the player was online for that session (Planned Release 2.0.0)
- - [x] Time set shorthand commands (Planned Release 2.0.0)
+ - [x] Time that the player joins the server (Release 2.0.0)
+ - [x] Time that the player leaves the server (Release 2.0.0)
+ - [x] Total time that the player was online for that session (Release 2.0.0)
+ - [x] Time set shorthand commands (Release 2.0.0)
