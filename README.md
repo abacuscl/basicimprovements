@@ -39,36 +39,36 @@
  If there is no target player, it defaults to yourself.
  
  - `/tsd`  
-   - Permission: `basicimprovements.time`  
+   - Permission: `basicimprovements.shorttime`  
  
  Sets the time to day.
  
  - `/tsn`  
-   - Permission: `basicimprovements.time`  
+   - Permission: `basicimprovements.shorttime`  
  
  Sets the time to night.
  
  #### Gamemode Commands
  - `/gma [target]`  
-   - Permission: `basicimprovements.gamemode`  
+   - Permission: `basicimprovements.shortgamemode`  
  
  Sets the target player's gamemode to adventure.
  If there is no target player, it defaults to yourself.
  
  - `/gms [target]`  
-   - Permission: `basicimprovements.gamemode`  
+   - Permission: `basicimprovements.shortgamemode`  
  
  Sets the target player's gamemode to survival.
  If there is no target player, it defaults to yourself.
  
  - `/gmc [target]`  
-   - Permission: `basicimprovements.gamemode`  
+   - Permission: `basicimprovements.shortgamemode`  
  
  Sets the target player's gamemode to creative.
  If there is no target player, it defaults to yourself.
  
  - `/gmsp [target]`  
-   - Permission: `basicimprovements.gamemode`  
+   - Permission: `basicimprovements.shortgamemode`  
  
  Sets the target player's gamemode to spectator.
  If there is no target player, it defaults to yourself.
