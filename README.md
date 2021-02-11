@@ -48,6 +48,8 @@
  
  Sets the time to night.
  
+ *Neither of the plugin provided time setting commands affect the server day counter; unlike the mojang provided time setting commands, which reset the day counter to 0.*
+ 
  #### Gamemode Commands
  - `/gma [target]`  
    - Permission: `basicimprovements.shortgamemode`  
