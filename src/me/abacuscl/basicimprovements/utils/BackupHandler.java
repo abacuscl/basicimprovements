@@ -12,7 +12,9 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 import me.abacuscl.basicimprovements.Main;
@@ -183,12 +185,13 @@ public class BackupHandler {
     //Deletes the oldest backup version
     private static void deleteOld() {
         File f = new File(WORKING_DIR + "/" + backupPath);
-        String[] contents = f.list();
+        File[] contents = f.listFiles();
+        Arrays.sort(contents, Comparator.comparingLong(File :: lastModified));
         
         if (contents.length > keptVersions) {
             try {
-            String str = "Old backup file successfully deleted: " + contents[0];
-            new File(f.getAbsolutePath() + "/" + contents[0]).delete();
+            String str = "Old backup file successfully deleted: " + contents[0].getName();
+            contents[0].delete();
             plugin.getLogger().info(str);
             } catch (Exception e) {
                 Chat.debugToConsole(e);
