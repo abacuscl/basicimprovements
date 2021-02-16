@@ -126,3 +126,5 @@
  - [x] Time that the player leaves the server (Release 2.0.0)
  - [x] Total time that the player was online for that session (Release 2.0.0)
  - [x] Time set shorthand commands (Release 2.0.0)
+ - [ ] Enabling/disabling the automatic backups (Planned Release 2.1.0)
+ - [ ] Allowing the user to choose the backup interval (Planned Release 2.1.0)
