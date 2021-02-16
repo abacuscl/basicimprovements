@@ -38,7 +38,8 @@ public class BackupHandler {
     private static final String WORKING_DIR = System.getProperty("user.dir");
     private static String backupPath = "plugins/BasicImprovements/backups";
     private static int keptVersions = 10;
-    private static final double INTERVAL = 24;
+    private static final double INTERVAL_HRS = 24;
+    private static long interval;
     private static double startTime = 24;
     private static boolean shutdown = false;
 
@@ -67,7 +68,7 @@ public class BackupHandler {
 
         //Interval is the amount of time in between runs in ticks
         //72000 is the number of ticks in 1 hour of real time
-        long interval = (long) (72000 * INTERVAL);
+        interval = (long) (72000 * INTERVAL_HRS);
 
         //Delay is the amount of time before the backup starts in ticks
         long delay = getRemaining();
@@ -77,6 +78,7 @@ public class BackupHandler {
             runBackup();
             String next = "Next automatic backup in approx: " + df.format(getRemaining() / 72000.) + "hr";
             plugin.getLogger().info(next); 
+            interval = getRemaining();
         }, delay, interval);
     }
 
@@ -176,8 +178,8 @@ public class BackupHandler {
             diff += 24;
         }
 
-        double intervalPart = diff - Math.floor(diff / INTERVAL) * INTERVAL;
-        double remaining = INTERVAL - intervalPart;
+        double intervalPart = diff - Math.floor(diff / INTERVAL_HRS) * INTERVAL_HRS;
+        double remaining = INTERVAL_HRS - intervalPart;
 
         return (long) (remaining * 72000);
     }
