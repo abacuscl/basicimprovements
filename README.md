@@ -3,6 +3,7 @@
  
  **Current Minecraft Versions: 1.16**
 
+### **This project has been archived and is no longer in development.**
  ----
  ## Table of Contents
  - [Features](#features)  
